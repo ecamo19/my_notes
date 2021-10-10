@@ -1,2 +1,7 @@
-site_name: ecamo19
+site_name: ""
 site_url: 
+
+theme:
+    name: mkdocs
+    nav_style: dark
+
