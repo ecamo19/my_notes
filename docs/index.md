@@ -1,8 +1,3 @@
-# Welcome to MkDocs
+# Objetive
+This repository serves the purpose of storing all the code, stats and other concepts that I learned over time.
 
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
