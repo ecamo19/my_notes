@@ -7,15 +7,15 @@
         
         
         
-        <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>Docker - </title>
-        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Dimension Reduction Methods - </title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
 
-        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -23,7 +23,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="../../.."></a>
+                <a class="navbar-brand" href="../.."></a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -34,7 +34,7 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href="../../.." class="nav-link">Home</a>
+                                <a href="../.." class="nav-link">Home</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Code archive <b class="caret"></b></a>
@@ -45,13 +45,13 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../../code_archive/python/concepts_python/" class="dropdown-item">Welcome to MkDocs</a>
+    <a href="../../code_archive/python/concepts_python/" class="dropdown-item">Welcome to MkDocs</a>
 </li>
     </ul>
   </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -60,34 +60,34 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="./" class="dropdown-item active">Docker</a>
+    <a href="../../linux/docker/concepts_docker/" class="dropdown-item">Docker</a>
 </li>
     </ul>
   </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Stats and modeling <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../stats_and_modeling/bias_variance_tradeoff/" class="dropdown-item">Bias-Variance trade-off</a>
+    <a href="../bias_variance_tradeoff/" class="dropdown-item">Bias-Variance trade-off</a>
 </li>
                                     
 <li>
-    <a href="../../../stats_and_modeling/dimension_reduction/" class="dropdown-item">Dimension Reduction Methods</a>
+    <a href="./" class="dropdown-item active">Dimension Reduction Methods</a>
 </li>
                                     
 <li>
-    <a href="../../../stats_and_modeling/model_selection/" class="dropdown-item">Model selection</a>
+    <a href="../model_selection/" class="dropdown-item">Model selection</a>
 </li>
                                     
 <li>
-    <a href="../../../stats_and_modeling/regularization/" class="dropdown-item">Shrinkage Methods</a>
+    <a href="../regularization/" class="dropdown-item">Shrinkage Methods</a>
 </li>
                                     
 <li>
-    <a href="../../../stats_and_modeling/resampling_methods/" class="dropdown-item">Resampling Methods</a>
+    <a href="../resampling_methods/" class="dropdown-item">Resampling Methods</a>
 </li>
                                 </ul>
                             </li>
@@ -100,12 +100,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../../../code_archive/python/concepts_python/" class="nav-link">
+                                <a rel="prev" href="../bias_variance_tradeoff/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../../stats_and_modeling/bias_variance_tradeoff/" class="nav-link">
+                                <a rel="next" href="../model_selection/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -127,13 +127,21 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#docker" class="nav-link">Docker</a>
+            <li class="nav-item" data-level="1"><a href="#dimension-reduction-methods" class="nav-link">Dimension Reduction Methods</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link"></a>
+            <li class="nav-item" data-level="2"><a href="#pcr" class="nav-link">PCR</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#project-layout" class="nav-link">Project layout</a>
+            <li class="nav-item" data-level="2"><a href="#pls" class="nav-link">PLS</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#what-goes-wrong-in-high-dimensions" class="nav-link">What Goes Wrong in High Dimensions?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#pcr-vrs-pls" class="nav-link">PCR vrs PLS</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -144,9 +152,19 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="docker">Docker</h1>
-<h2 id="_1"></h2>
-<h2 id="project-layout">Project layout</h2></div>
+<h1 id="dimension-reduction-methods">Dimension Reduction Methods</h1>
+<p>These methods control variance by transforming the predictors and then fit a least squares model using these transformed variables. With these methods overfitting is avoid by using a less flexible approach.</p>
+<h2 id="pcr">PCR</h2>
+<p>Does not perform feature selection</p>
+<ul>
+<li>The scores indicates if a value is below or above average. For example if the score &lt; 0 in a PCA with two variables, then this indicates a city with below-average population size and below average ad spending. </li>
+</ul>
+<h2 id="pls">PLS</h2>
+<p>PLS identifies new features in a supervised way by making use of the response Y in order to identify new features that not only approximate the old features well, but also that are related to the response.</p>
+<h2 id="what-goes-wrong-in-high-dimensions">What Goes Wrong in High Dimensions?</h2>
+<p>Cp, AIC, and BIC approaches are not appropriate in the high-dimensional setting, because estimating $\sigma^2$ is problematic.</p>
+<h2 id="pcr-vrs-pls">PCR vrs PLS</h2>
+<p>Since the directions in PLS are obtained by integrating the response variable, they explain more variation in Y than the principal components do. PLS also gives similar loadings to correlated variables, but variables that are correlated with the Y receive more weights compared with PCR. </p></div>
             </div>
         </div>
 
@@ -155,11 +173,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "../../..",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../../js/base.js" defer></script>
-        <script src="../../../search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

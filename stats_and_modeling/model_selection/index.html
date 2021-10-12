@@ -7,15 +7,15 @@
         
         
         
-        <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>Docker - </title>
-        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Model selection - </title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
 
-        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -23,7 +23,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="../../.."></a>
+                <a class="navbar-brand" href="../.."></a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -34,7 +34,7 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href="../../.." class="nav-link">Home</a>
+                                <a href="../.." class="nav-link">Home</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Code archive <b class="caret"></b></a>
@@ -45,13 +45,13 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../../code_archive/python/concepts_python/" class="dropdown-item">Welcome to MkDocs</a>
+    <a href="../../code_archive/python/concepts_python/" class="dropdown-item">Welcome to MkDocs</a>
 </li>
     </ul>
   </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -60,34 +60,34 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="./" class="dropdown-item active">Docker</a>
+    <a href="../../linux/docker/concepts_docker/" class="dropdown-item">Docker</a>
 </li>
     </ul>
   </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Stats and modeling <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../stats_and_modeling/bias_variance_tradeoff/" class="dropdown-item">Bias-Variance trade-off</a>
+    <a href="../bias_variance_tradeoff/" class="dropdown-item">Bias-Variance trade-off</a>
 </li>
                                     
 <li>
-    <a href="../../../stats_and_modeling/dimension_reduction/" class="dropdown-item">Dimension Reduction Methods</a>
+    <a href="../dimension_reduction/" class="dropdown-item">Dimension Reduction Methods</a>
 </li>
                                     
 <li>
-    <a href="../../../stats_and_modeling/model_selection/" class="dropdown-item">Model selection</a>
+    <a href="./" class="dropdown-item active">Model selection</a>
 </li>
                                     
 <li>
-    <a href="../../../stats_and_modeling/regularization/" class="dropdown-item">Shrinkage Methods</a>
+    <a href="../regularization/" class="dropdown-item">Shrinkage Methods</a>
 </li>
                                     
 <li>
-    <a href="../../../stats_and_modeling/resampling_methods/" class="dropdown-item">Resampling Methods</a>
+    <a href="../resampling_methods/" class="dropdown-item">Resampling Methods</a>
 </li>
                                 </ul>
                             </li>
@@ -100,12 +100,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../../../code_archive/python/concepts_python/" class="nav-link">
+                                <a rel="prev" href="../dimension_reduction/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../../stats_and_modeling/bias_variance_tradeoff/" class="nav-link">
+                                <a rel="next" href="../regularization/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -127,13 +127,29 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#docker" class="nav-link">Docker</a>
+            <li class="nav-item" data-level="1"><a href="#model-selection" class="nav-link">Model selection</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link"></a>
+            <li class="nav-item" data-level="2"><a href="#best-subset-selection" class="nav-link">Best Subset Selection</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#project-layout" class="nav-link">Project layout</a>
+            <li class="nav-item" data-level="2"><a href="#forward-stepwise-selection" class="nav-link">Forward Stepwise Selection</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#backward-stepwise-selection" class="nav-link">Backward Stepwise Selection</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#choosing-the-optimal-model-cp-aic-bic-and-adjusted-r2" class="nav-link">Choosing the Optimal Model Cp , AIC, BIC, and Adjusted R^2</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#one-standard-error-rule" class="nav-link">One-standard-error rule.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#do-not-use-r2-or-rss-for-selecting-a-model" class="nav-link">Do not use R^2 or RSS for selecting a model</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -144,9 +160,28 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="docker">Docker</h1>
-<h2 id="_1"></h2>
-<h2 id="project-layout">Project layout</h2></div>
+<h1 id="model-selection">Model selection</h1>
+<h2 id="best-subset-selection">Best Subset Selection</h2>
+<p>Fit a separate least squares regression for each possible combination of $p$ predictors. That is, fit all possible combinations and evaluate all the possibilities. </p>
+<p>The problem with this is that we have to evaluate $2^p$ models which is computationally expensive. </p>
+<h2 id="forward-stepwise-selection">Forward Stepwise Selection</h2>
+<p>This method starts with a null model with no predictors, then add a predictor, evaluate the model and repeats.</p>
+<p>Forward selection can be applied when n &lt; p but only to $M_0$ ..... $M_{n - 1}$  since  n &gt;= p will not yield a unique solution.</p>
+<h2 id="backward-stepwise-selection">Backward Stepwise Selection</h2>
+<p>This method begins with the full least squares model containing all p predictors. This works when n &gt; p</p>
+<h2 id="choosing-the-optimal-model-cp-aic-bic-and-adjusted-r2">Choosing the Optimal Model Cp , AIC, BIC, and Adjusted R^2</h2>
+<ul>
+<li>
+<p>Cp: Add a 2d$\sigma^2$ penalty that increases as the number of predictor increase. Cp ~ AIC</p>
+</li>
+<li>
+<p>BIC: Usually BIC chooses a model with less predictors that the one chosen by Cp </p>
+</li>
+</ul>
+<h2 id="one-standard-error-rule">One-standard-error rule.</h2>
+<p>We first calculate the standard error of the estimated test MSE for each model size, and then select the smallest model for which the estimated test error is within one standard error of the lowest point on the curve.</p>
+<h2 id="do-not-use-r2-or-rss-for-selecting-a-model">Do not use R^2 or RSS for selecting a model</h2>
+<p>The training error will decrease as more variables are included in the model, but the test error may not. Therefore, training set RSS and training set R^2  cannot be used to select from among a set of models with diﬀerent numbers of variables. $R^2$ increases with the number of predictors while RSS decrease.</p></div>
             </div>
         </div>
 
@@ -155,11 +190,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "../../..",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../../js/base.js" defer></script>
-        <script src="../../../search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

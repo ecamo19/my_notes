@@ -7,15 +7,15 @@
         
         
         
-        <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>Docker - </title>
-        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Shrinkage Methods - </title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
 
-        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -23,7 +23,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="../../.."></a>
+                <a class="navbar-brand" href="../.."></a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -34,7 +34,7 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href="../../.." class="nav-link">Home</a>
+                                <a href="../.." class="nav-link">Home</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Code archive <b class="caret"></b></a>
@@ -45,13 +45,13 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../../code_archive/python/concepts_python/" class="dropdown-item">Welcome to MkDocs</a>
+    <a href="../../code_archive/python/concepts_python/" class="dropdown-item">Welcome to MkDocs</a>
 </li>
     </ul>
   </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Linux <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -60,34 +60,34 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="./" class="dropdown-item active">Docker</a>
+    <a href="../../linux/docker/concepts_docker/" class="dropdown-item">Docker</a>
 </li>
     </ul>
   </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Stats and modeling <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../stats_and_modeling/bias_variance_tradeoff/" class="dropdown-item">Bias-Variance trade-off</a>
+    <a href="../bias_variance_tradeoff/" class="dropdown-item">Bias-Variance trade-off</a>
 </li>
                                     
 <li>
-    <a href="../../../stats_and_modeling/dimension_reduction/" class="dropdown-item">Dimension Reduction Methods</a>
+    <a href="../dimension_reduction/" class="dropdown-item">Dimension Reduction Methods</a>
 </li>
                                     
 <li>
-    <a href="../../../stats_and_modeling/model_selection/" class="dropdown-item">Model selection</a>
+    <a href="../model_selection/" class="dropdown-item">Model selection</a>
 </li>
                                     
 <li>
-    <a href="../../../stats_and_modeling/regularization/" class="dropdown-item">Shrinkage Methods</a>
+    <a href="./" class="dropdown-item active">Shrinkage Methods</a>
 </li>
                                     
 <li>
-    <a href="../../../stats_and_modeling/resampling_methods/" class="dropdown-item">Resampling Methods</a>
+    <a href="../resampling_methods/" class="dropdown-item">Resampling Methods</a>
 </li>
                                 </ul>
                             </li>
@@ -100,12 +100,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../../../code_archive/python/concepts_python/" class="nav-link">
+                                <a rel="prev" href="../model_selection/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../../stats_and_modeling/bias_variance_tradeoff/" class="nav-link">
+                                <a rel="next" href="../resampling_methods/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -127,13 +127,13 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#docker" class="nav-link">Docker</a>
+            <li class="nav-item" data-level="1"><a href="#shrinkage-methods" class="nav-link">Shrinkage Methods</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link"></a>
+            <li class="nav-item" data-level="2"><a href="#ridge-regression" class="nav-link">Ridge Regression</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#project-layout" class="nav-link">Project layout</a>
+            <li class="nav-item" data-level="2"><a href="#lasso-regression" class="nav-link">Lasso Regression</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -144,9 +144,22 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="docker">Docker</h1>
-<h2 id="_1"></h2>
-<h2 id="project-layout">Project layout</h2></div>
+<h1 id="shrinkage-methods">Shrinkage Methods</h1>
+<p>This methods work by controlling variance (less flexible methods) by shrinking coefs towards zero or exactly zero. With these methods overfitting is avoid by using a less flexible approach.</p>
+<h2 id="ridge-regression">Ridge Regression</h2>
+<p>Ridge Regression will include all p predictors in the final model. This method just shrink coefs towards zero.</p>
+<p>$\lambda$ = Penalty term (l2), the larger the $\lambda$ is the smallest (towards zero) the coefs are.</p>
+<p>Ridge regression’s advantage over least squares is rooted in the bias-variance trade-oﬀ. As $\lambda$ increases, the flexibility of the ridge regression fit decreases, leading to decreased variance but increased bias. At some point MSE will decrease.</p>
+<p>Ridge regression works best in situations where the least squares estimates have high variance.</p>
+<h2 id="lasso-regression">Lasso Regression</h2>
+<p>The lasso shrinks the coefs to zero which can be use for variable selection</p>
+<p><strong>Differences between lasso and ridge</strong></p>
+<ul>
+<li>Penalty term</li>
+<li>Lasso performs feature selection</li>
+<li>Lasso will perform better in a scenario where a few p have a high coefs and the others are close to zero</li>
+<li>Ridge will perform better when there are many predictors with with coefs of the same  ~size</li>
+</ul></div>
             </div>
         </div>
 
@@ -155,11 +168,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "../../..",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../../js/base.js" defer></script>
-        <script src="../../../search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
