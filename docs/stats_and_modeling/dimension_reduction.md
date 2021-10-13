@@ -1,5 +1,7 @@
 # Dimension Reduction Methods
 
+When n << p and/or there is collinearity the variance will increase so OLS will not perform well, so other methods are need to overcome this. 
+
 These methods control variance by transforming the predictors and then fit a least squares model using these transformed variables. With these methods overfitting is avoid by using a less flexible approach.
 
 If the correlation among predictors is high, then the ordinary least squares solution for multiple linear regression will have high variability and will become unstable OR  if n << p  least squares will be unable to ﬁnd a unique set of regression coeﬃcients that minimize the SSE
@@ -26,4 +28,4 @@ Cp, AIC, and BIC approaches are not appropriate in the high-dimensional setting,
 
 
 ## PCR vrs PLS
-Since the directions in PLS are obtained by integrating the response variable, they explain more variation in Y than the principal components do. PLS also gives similar loadings to correlated variables, but variables that are correlated with the Y receive more weights compared with PCR. 
+Since the directions in PLS are obtained by integrating the response variable, they explain more variation in Y than the principal components regression do. PLS also gives similar loadings to correlated variables, but variables that are correlated with the Y receive more weights compared with PCR. 

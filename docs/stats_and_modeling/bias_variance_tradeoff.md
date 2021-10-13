@@ -3,6 +3,7 @@
 In a perfect scenario, a statistical method should achieve low variance and low bias 
 
 + __Bias__ 
+
 Bias is defined as the error introduced by approximating a real life problem (which in nature could have complicated relationships) by a simple model
 
 I associate bias as a model simplification. Like Fitting a linear model that follow a non-lineal trend 

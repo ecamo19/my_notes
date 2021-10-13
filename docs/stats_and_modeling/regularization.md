@@ -1,6 +1,8 @@
 # Penalized Models
 
-This methods work by controlling variance (less flexible methods) by shrinking coefs towards zero or exactly zero. With these methods overfitting is avoid by using a less flexible approach.
+When n << p and/or there is collinearity the variance will increase so OLS will not perform well, so other methods are need to overcome this. 
+
+Penalized methods work by controlling variance (less flexible methods) by shrinking coefs towards zero or exactly zero. With these methods overfitting is avoid by using a less flexible approach.
 
 By sacriﬁcing some bias, we can often reduce the variance enough to make the overall MSE lower than unbiased models.
 
