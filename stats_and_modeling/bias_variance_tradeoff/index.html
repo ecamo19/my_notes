@@ -80,7 +80,7 @@
 </li>
                                     
 <li>
-    <a href="../regularization/" class="dropdown-item">Shrinkage Methods</a>
+    <a href="../regularization/" class="dropdown-item">Penalized Models</a>
 </li>
                                     
 <li>
@@ -146,7 +146,9 @@ Bias is defined as the error introduced by approximating a real life problem (wh
 <p>How much a function $f$ would change if we estimated it using a different train set? 
 High variance indicate that if we change a data point in the data the function $f$ will change. </p>
 <p>I associate variance with overfit. Models with high variance have high flexibility because those model adjust following each data point.</p>
-<p>For example linear models have low variance but they could have high bias</p></div>
+<p>For example linear models have low variance but they could have high bias</p>
+<p>Highly correlated predictors can lead to collinearity issues and this can greatly increase the model variance.</p>
+<p>More complex models can have very high variance, which leads to over-ﬁtting. On the other hand, simple models tend not to over-ﬁt, but under-ﬁt if they are not ﬂexible enough to model the true relationship (thus high bias).</p></div>
             </div>
         </div>
 

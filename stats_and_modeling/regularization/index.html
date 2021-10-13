@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Shrinkage Methods - </title>
+        <title>Penalized Models - </title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -80,7 +80,7 @@
 </li>
                                     
 <li>
-    <a href="./" class="dropdown-item active">Shrinkage Methods</a>
+    <a href="./" class="dropdown-item active">Penalized Models</a>
 </li>
                                     
 <li>
@@ -124,7 +124,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#shrinkage-methods" class="nav-link">Shrinkage Methods</a>
+            <li class="nav-item" data-level="1"><a href="#penalized-models" class="nav-link">Penalized Models</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#ridge-regression" class="nav-link">Ridge Regression</a>
               <ul class="nav flex-column">
@@ -141,15 +141,17 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="shrinkage-methods">Shrinkage Methods</h1>
+<h1 id="penalized-models">Penalized Models</h1>
 <p>This methods work by controlling variance (less flexible methods) by shrinking coefs towards zero or exactly zero. With these methods overfitting is avoid by using a less flexible approach.</p>
+<p>By sacriﬁcing some bias, we can often reduce the variance enough to make the overall MSE lower than unbiased models.</p>
 <h2 id="ridge-regression">Ridge Regression</h2>
 <p>Ridge Regression will include all p predictors in the final model. This method just shrink coefs towards zero.</p>
+<p>Ridge regression (Hoerl 1970) adds a penalty on the sum of the squared regression parameters (l2)</p>
 <p>$\lambda$ = Penalty term (l2), the larger the $\lambda$ is the smallest (towards zero) the coefs are.</p>
 <p>Ridge regression’s advantage over least squares is rooted in the bias-variance trade-oﬀ. As $\lambda$ increases, the flexibility of the ridge regression fit decreases, leading to decreased variance but increased bias. At some point MSE will decrease.</p>
 <p>Ridge regression works best in situations where the least squares estimates have high variance.</p>
 <h2 id="lasso-regression">Lasso Regression</h2>
-<p>The lasso shrinks the coefs to zero which can be use for variable selection</p>
+<p>The lasso shrinks the coefs to zero which can be used for variable selection</p>
 <p><strong>Differences between lasso and ridge</strong></p>
 <ul>
 <li>Penalty term</li>

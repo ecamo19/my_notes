@@ -80,7 +80,7 @@
 </li>
                                     
 <li>
-    <a href="../regularization/" class="dropdown-item">Shrinkage Methods</a>
+    <a href="../regularization/" class="dropdown-item">Penalized Models</a>
 </li>
                                     
 <li>
@@ -151,13 +151,17 @@
 
 <h1 id="dimension-reduction-methods">Dimension Reduction Methods</h1>
 <p>These methods control variance by transforming the predictors and then fit a least squares model using these transformed variables. With these methods overfitting is avoid by using a less flexible approach.</p>
+<p>If the correlation among predictors is high, then the ordinary least squares solution for multiple linear regression will have high variability and will become unstable OR  if n &lt;&lt; p  least squares will be unable to ﬁnd a unique set of regression coeﬃcients that minimize the SSE</p>
 <h2 id="pcr">PCR</h2>
 <p>Does not perform feature selection</p>
+<p>Sometimes dimension reduction via PCA does not necessarily produce new predictors that explain the response.</p>
 <ul>
 <li>The scores indicates if a value is below or above average. For example if the score &lt; 0 in a PCA with two variables, then this indicates a city with below-average population size and below average ad spending. </li>
 </ul>
 <h2 id="pls">PLS</h2>
+<p>Kuhn: We recommend using PLS when there are correlated predictors and a linear regression-type solution is desired</p>
 <p>PLS identifies new features in a supervised way by making use of the response Y in order to identify new features that not only approximate the old features well, but also that are related to the response.</p>
+<p>PLS ﬁnds linear combinations of the predictors</p>
 <h2 id="what-goes-wrong-in-high-dimensions">What Goes Wrong in High Dimensions?</h2>
 <p>Cp, AIC, and BIC approaches are not appropriate in the high-dimensional setting, because estimating $\sigma^2$ is problematic.</p>
 <h2 id="pcr-vrs-pls">PCR vrs PLS</h2>
