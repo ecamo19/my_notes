@@ -16,3 +16,6 @@ I associate variance with overfit. Models with high variance have high flexibili
 
 For example linear models have low variance but they could have high bias
 
+Highly correlated predictors can lead to collinearity issues and this can greatly increase the model variance.
+
+More complex models can have very high variance, which leads to over-ﬁtting. On the other hand, simple models tend not to over-ﬁt, but under-ﬁt if they are not ﬂexible enough to model the true relationship (thus high bias).
