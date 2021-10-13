@@ -7,15 +7,15 @@
         
         
         
-        <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Resampling Methods - </title>
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>Bias-Variance trade-off - </title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
 
-        <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -23,7 +23,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="../.."></a>
+                <a class="navbar-brand" href="../../.."></a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -34,7 +34,7 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href="../.." class="nav-link">Notes</a>
+                                <a href="../../.." class="nav-link">Notes</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Code archive <b class="caret"></b></a>
@@ -45,10 +45,19 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../code_archive/python/concepts_python/" class="dropdown-item">Welcome to MkDocs</a>
+    <a href="../../../code_archive/python/concepts_python/" class="dropdown-item">Welcome to MkDocs</a>
 </li>
     </ul>
   </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">How to <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../how_to/how_to_set_virtual_env_in_python/" class="dropdown-item">How to set a virtual enviroment for Python</a>
+</li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -60,7 +69,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../linux/docker/concepts_docker/" class="dropdown-item">Docker</a>
+    <a href="../../../linux/docker/concepts_docker/" class="dropdown-item">Docker</a>
 </li>
     </ul>
   </li>
@@ -70,25 +79,31 @@
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Stats and modeling <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
+  <li class="dropdown-submenu">
+    <a href="#" class="dropdown-item">Theory</a>
+    <ul class="dropdown-menu">
+            
 <li>
-    <a href="../bias_variance_tradeoff/" class="dropdown-item">Bias-Variance trade-off</a>
+    <a href="./" class="dropdown-item active">Bias-Variance trade-off</a>
 </li>
-                                    
+            
 <li>
     <a href="../dimension_reduction/" class="dropdown-item">Dimension Reduction Methods</a>
 </li>
-                                    
+            
 <li>
     <a href="../model_selection/" class="dropdown-item">Model selection</a>
 </li>
-                                    
+            
 <li>
     <a href="../regularization/" class="dropdown-item">Penalized Models</a>
 </li>
-                                    
+            
 <li>
-    <a href="./" class="dropdown-item active">Resampling Methods</a>
+    <a href="../resampling_methods/" class="dropdown-item">Resampling Methods</a>
 </li>
+    </ul>
+  </li>
                                 </ul>
                             </li>
                         </ul>
@@ -100,12 +115,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../regularization/" class="nav-link">
+                                <a rel="prev" href="../../../linux/docker/concepts_docker/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" class="nav-link disabled">
+                                <a rel="next" href="../dimension_reduction/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -127,7 +142,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#resampling-methods" class="nav-link">Resampling Methods</a>
+            <li class="nav-item" data-level="1"><a href="#bias-variance-trade-off" class="nav-link">Bias-Variance trade-off</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -136,26 +151,22 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="resampling-methods">Resampling Methods</h1>
-<p>Resampling methods are used in the absence of very large designated test sets that can be used to directly estimate test error rates  </p>
+<h1 id="bias-variance-trade-off">Bias-Variance trade-off</h1>
+<p>In a perfect scenario, a statistical method should achieve low variance and low bias </p>
 <ul>
-<li><strong>Validation Set Approach</strong> </li>
+<li><strong>Bias</strong> </li>
 </ul>
-<p>Good when n is large. This method consist in dividing randomly the data set into Training and Test (Validation) data sets</p>
-<p>Drawbacks:</p>
-<p>1) High Variable, depends on the observations chosen 
-2) Not all the data is included in training the model</p>
+<p>Bias is defined as the error introduced by approximating a real life problem (which in nature could have complicated relationships) by a simple model</p>
+<p>I associate bias as a model simplification. Like Fitting a linear model that follow a non-lineal trend </p>
 <ul>
-<li><strong>Leave-one-out cross validation (LOOCV)</strong></li>
+<li><strong>Variance</strong></li>
 </ul>
-<p>In this method a single pair observations ($x_1$,$y_1$) are left out for validation and the rest of the data is used for training being repeated n times</p>
-<p>Drawbacks:</p>
-<p>1) Expensive to implement (time consuming, the validation is done in n observations) </p>
-<ul>
-<li><strong>k-fold Cross Validation</strong></li>
-</ul>
-<p>Randomly divide the whole data set in k groups of equal size. The first fold is used as validation set and the others are used as training sets. This procedure is repeated k times, each time, a different fold is treated as validation test. </p>
-<p>For example if k = 10 then the data set is divided into 10 folds, the first one will be used as validation set and then the statistical method (i.e. linear model) is fitted on each one of the other 9 folds. This is repeated until each one of the folds has being used as validation sets.  </p></div>
+<p>How much a function $f$ would change if we estimated it using a different train set? 
+High variance indicate that if we change a data point in the data the function $f$ will change. </p>
+<p>I associate variance with overfit. Models with high variance have high flexibility because those model adjust following each data point.</p>
+<p>For example linear models have low variance but they could have high bias</p>
+<p>Highly correlated predictors can lead to collinearity issues and this can greatly increase the model variance.</p>
+<p>More complex models can have very high variance, which leads to over-ﬁtting. On the other hand, simple models tend not to over-ﬁt, but under-ﬁt if they are not ﬂexible enough to model the true relationship (thus high bias).</p></div>
             </div>
         </div>
 
@@ -164,11 +175,11 @@
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "../..",
+            var base_url = "../../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../js/base.js" defer></script>
-        <script src="../../search/main.js" defer></script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">

@@ -7,15 +7,15 @@
         
         
         
-        <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>Welcome to MkDocs - </title>
-        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>How to set a virtual enviroment for Python - </title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
 
-        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../../js/bootstrap.min.js" defer></script>
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
@@ -23,7 +23,7 @@
     <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="../../.."></a>
+                <a class="navbar-brand" href="../.."></a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -34,9 +34,9 @@
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
                             <li class="navitem">
-                                <a href="../../.." class="nav-link">Notes</a>
+                                <a href="../.." class="nav-link">Notes</a>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Code archive <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -45,18 +45,18 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="./" class="dropdown-item active">Welcome to MkDocs</a>
+    <a href="../../code_archive/python/concepts_python/" class="dropdown-item">Welcome to MkDocs</a>
 </li>
     </ul>
   </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">How to <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="../../../how_to/how_to_set_virtual_env_in_python/" class="dropdown-item">How to set a virtual enviroment for Python</a>
+    <a href="./" class="dropdown-item active">How to set a virtual enviroment for Python</a>
 </li>
                                 </ul>
                             </li>
@@ -69,7 +69,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../../linux/docker/concepts_docker/" class="dropdown-item">Docker</a>
+    <a href="../../linux/docker/concepts_docker/" class="dropdown-item">Docker</a>
 </li>
     </ul>
   </li>
@@ -84,23 +84,23 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../../stats_and_modeling/theory/bias_variance_tradeoff/" class="dropdown-item">Bias-Variance trade-off</a>
+    <a href="../../stats_and_modeling/theory/bias_variance_tradeoff/" class="dropdown-item">Bias-Variance trade-off</a>
 </li>
             
 <li>
-    <a href="../../../stats_and_modeling/theory/dimension_reduction/" class="dropdown-item">Dimension Reduction Methods</a>
+    <a href="../../stats_and_modeling/theory/dimension_reduction/" class="dropdown-item">Dimension Reduction Methods</a>
 </li>
             
 <li>
-    <a href="../../../stats_and_modeling/theory/model_selection/" class="dropdown-item">Model selection</a>
+    <a href="../../stats_and_modeling/theory/model_selection/" class="dropdown-item">Model selection</a>
 </li>
             
 <li>
-    <a href="../../../stats_and_modeling/theory/regularization/" class="dropdown-item">Penalized Models</a>
+    <a href="../../stats_and_modeling/theory/regularization/" class="dropdown-item">Penalized Models</a>
 </li>
             
 <li>
-    <a href="../../../stats_and_modeling/theory/resampling_methods/" class="dropdown-item">Resampling Methods</a>
+    <a href="../../stats_and_modeling/theory/resampling_methods/" class="dropdown-item">Resampling Methods</a>
 </li>
     </ul>
   </li>
@@ -115,12 +115,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../../.." class="nav-link">
+                                <a rel="prev" href="../../code_archive/python/concepts_python/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../../../how_to/how_to_set_virtual_env_in_python/" class="nav-link">
+                                <a rel="next" href="../../linux/docker/concepts_docker/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -142,13 +142,53 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#welcome-to-mkdocs" class="nav-link">Welcome to MkDocs</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#commands" class="nav-link">Commands</a>
+            <li class="nav-item" data-level="1"><a href="#check-pip-version" class="nav-link">Check pip version</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#project-layout" class="nav-link">Project layout</a>
+            
+            <li class="nav-item" data-level="1"><a href="#install-pipenv-at-the-user-level" class="nav-link">Install pipenv at the user level</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#check-that-pipenv-is-install" class="nav-link">Check that pipenv is install</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#set-up-virtual-enviroment-for-the-first-time" class="nav-link">Set-up virtual enviroment for the first time</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#set-up-last-python-version" class="nav-link">Set up last python version</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#set-up-an-old-python-version" class="nav-link">Set up an old python version</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#daily-workflow" class="nav-link">Daily workflow</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#open-a-shell-terminal-inside-a-virtual-environment" class="nav-link">Open a shell (terminal) inside a virtual environment</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#install-packages-in-pipenv" class="nav-link">Install packages in pipenv</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#install-a-specific-version-of-the-package-in-pipenv" class="nav-link">Install a specific version of the package in pipenv</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#create-requirementtxt-file" class="nav-link">Create requirement.txt file</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#removing-a-virtualenv" class="nav-link">Removing a virtualenv</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -159,20 +199,87 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+<pre><code>knitr::opts_chunk$set(echo = TRUE, comment = &quot;&quot;, fig.align = 'center',
+                      fig.width = 16, fig.height = 10, eval = F)
+</code></pre>
+<p>All the code was gather from this <a href="https://www.codecademy.com/paths/computer-science/tracks/cspath-cs-101/modules/cspath-modules/articles/learn-python-pipenv">video</a></p>
+<h1 id="check-pip-version">Check pip version</h1>
+<pre><code>pip --version
+</code></pre>
+<h1 id="install-pipenv-at-the-user-level">Install pipenv at the user level</h1>
+<pre><code>pip install --user pipenv
+</code></pre>
+<p><strong>If you see a warning saying: ' bla bla bla which is not in path ' you have to edit the bash profile</strong></p>
+<pre><code># Open bash_profile
+nano ~/.bash_profile
+
+# Add to the profile 
+export PATH=&quot;add path that appears in the error:$PATH&quot;
+
+restart terminal
+</code></pre>
+<h1 id="check-that-pipenv-is-install">Check that pipenv is install</h1>
+<pre><code>pipenv --version
+</code></pre>
+<h1 id="set-up-virtual-enviroment-for-the-first-time">Set-up virtual enviroment for the first time</h1>
+<h2 id="set-up-last-python-version">Set up last python version</h2>
+<pre><code># Initialize python virtual env
+# Three means the python version, if you work with python 2 change to to two  
+# Run this in the folder the you are working 
+# Should create a file called Pipfile
+
+pipenv --three
+</code></pre>
+<h2 id="set-up-an-old-python-version">Set up an old python version</h2>
+<pre><code>
+# Check all the python versions available in my computer
+ls /usr/bin/python*
+
+# Install the version wanted
+pipenv install --python 3.7 
+</code></pre>
+<h1 id="daily-workflow">Daily workflow</h1>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
+<li>
+<p><strong>The steps from above are done to set up the pipenv for the first time.</strong></p>
+</li>
+<li>
+<p><strong>The following steps are done every single time I work in the project</strong></p>
+</li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
+<h2 id="open-a-shell-terminal-inside-a-virtual-environment">Open a shell (terminal) inside a virtual environment</h2>
+<pre><code>pipenv shell
+
+# Exit the shell
+exit
+</code></pre>
+<pre><code># Open python inside the virtual environment
+python3
+
+# Check package version
+print(numpy.__version__)
+</code></pre>
+<h2 id="install-packages-in-pipenv">Install packages in pipenv</h2>
+<ul>
+<li>
+<p><strong>Remember to run this command inside the pipenv shell</strong> </p>
+</li>
+<li>
+<p><strong>Make sure that the package appears in the PIPfile</strong></p>
+</li>
+</ul>
+<pre><code># This install any version of numpy aka the latest version
+pipenv install _package_
+</code></pre>
+<h2 id="install-a-specific-version-of-the-package-in-pipenv">Install a specific version of the package in pipenv</h2>
+<pre><code># This install a specific version of a package 
+pipenv install _package_ == 2.18.1 
+</code></pre>
+<h2 id="create-requirementtxt-file">Create requirement.txt file</h2>
+<pre><code>pipenv lock -r &gt; requirements.txt
+</code></pre>
+<h2 id="removing-a-virtualenv">Removing a virtualenv</h2>
+<pre><code>test_project pipenv --rm
 </code></pre></div>
             </div>
         </div>
@@ -182,11 +289,11 @@ docs/
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = "../../..",
+            var base_url = "../..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../../../js/base.js" defer></script>
-        <script src="../../../search/main.js" defer></script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
