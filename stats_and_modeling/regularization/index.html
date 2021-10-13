@@ -145,7 +145,8 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="penalized-models">Penalized Models</h1>
-<p>This methods work by controlling variance (less flexible methods) by shrinking coefs towards zero or exactly zero. With these methods overfitting is avoid by using a less flexible approach.</p>
+<p>When n &lt;&lt; p and/or there is collinearity the variance will increase so OLS will not perform well, so other methods are need to overcome this. </p>
+<p>Penalized methods work by controlling variance (less flexible methods) by shrinking coefs towards zero or exactly zero. With these methods overfitting is avoid by using a less flexible approach.</p>
 <p>By sacriﬁcing some bias, we can often reduce the variance enough to make the overall MSE lower than unbiased models.</p>
 <h2 id="ridge-regression">Ridge Regression</h2>
 <p>Ridge Regression will include all p predictors in the final model. This method just shrink coefs towards zero.</p>
