@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>Resampling Methods - </title>
+        <title>Law of large numbers - </title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -84,7 +84,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../applications/law_of_large_numbers/" class="dropdown-item">Law of large numbers</a>
+    <a href="./" class="dropdown-item active">Law of large numbers</a>
 </li>
     </ul>
   </li>
@@ -94,31 +94,31 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../bias_variance_tradeoff/" class="dropdown-item">Bias-Variance trade-off</a>
+    <a href="../../theory/bias_variance_tradeoff/" class="dropdown-item">Bias-Variance trade-off</a>
 </li>
             
 <li>
-    <a href="../dimesion_reduction/" class="dropdown-item">Dimension Reduction Methods</a>
+    <a href="../../theory/dimesion_reduction/" class="dropdown-item">Dimension Reduction Methods</a>
 </li>
             
 <li>
-    <a href="../model_selection/" class="dropdown-item">Model selection</a>
+    <a href="../../theory/model_selection/" class="dropdown-item">Model selection</a>
 </li>
             
 <li>
-    <a href="../multiple_regression/" class="dropdown-item">Multiple Regression</a>
+    <a href="../../theory/multiple_regression/" class="dropdown-item">Multiple Regression</a>
 </li>
             
 <li>
-    <a href="../probability/" class="dropdown-item">Probability</a>
+    <a href="../../theory/probability/" class="dropdown-item">Probability</a>
 </li>
             
 <li>
-    <a href="../regularization/" class="dropdown-item">Penalized Models</a>
+    <a href="../../theory/regularization/" class="dropdown-item">Penalized Models</a>
 </li>
             
 <li>
-    <a href="./" class="dropdown-item active">Resampling Methods</a>
+    <a href="../../theory/resampling_methods/" class="dropdown-item">Resampling Methods</a>
 </li>
     </ul>
   </li>
@@ -128,12 +128,12 @@
 
                     <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a rel="prev" href="../regularization/" class="nav-link">
+                                <a rel="prev" href="../../../linux/docker/concepts_docker/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" class="nav-link disabled">
+                                <a rel="next" href="../../theory/bias_variance_tradeoff/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -154,11 +154,6 @@
     
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
-            
-            <li class="nav-item" data-level="1"><a href="#resampling-methods" class="nav-link">Resampling Methods</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
         </ul>
     </div>
 </div></div>
@@ -871,28 +866,216 @@ all of MD as it is not optimized for dense, information rich UIs.
     }
     init_mathjax();
     </script>
-    <!-- End of mathjax configuration --><div class="jupyter-wrapper">
-<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="resampling-methods">Resampling Methods<a class="anchor-link" href="#Resampling-Methods">&#182;</a></h1><p>Resampling methods are used in the absence of very large designated test sets that can be used to directly estimate test error rates</p>
-<ul>
-<li><strong>Validation Set Approach</strong> </li>
-</ul>
-<p>Good when n is large. This method consist in dividing randomly the data set into Training and Test (Validation) data sets</p>
-<p>Drawbacks:</p>
-<p>1) High Variable, depends on the observations chosen 
-2) Not all the data is included in training the model</p>
-<ul>
-<li><strong>Leave-one-out cross validation (LOOCV)</strong></li>
-</ul>
-<p>In this method a single pair observations ($x_1$,$y_1$) are left out for validation and the rest of the data is used for training being repeated n times</p>
-<p>Drawbacks:</p>
-<p>1) Expensive to implement (time consuming, the validation is done in n observations)</p>
-<ul>
-<li><strong>k-fold Cross Validation</strong></li>
-</ul>
-<p>Randomly divide the whole data set in k groups of equal size. The first fold is used as validation set and the others are used as training sets. This procedure is repeated k times, each time, a different fold is treated as validation test.</p>
-<p>For example if k = 10 then the data set is divided into 10 folds, the first one will be used as validation set and then the statistical method (i.e. linear model) is fitted on each one of the other 9 folds. This is repeated until each one of the folds has being used as validation sets.</p>
+    <!-- End of mathjax configuration --><div class="jupyter-wrapper"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-1">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+        <div class="CodeMirror cm-s-jupyter">
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+<div id="cell-1" class="clipboard-copy-txt">import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-2">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+        <div class="CodeMirror cm-s-jupyter">
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="k">def</span> <span class="nf">coin_flip_experiment</span><span class="p">():</span>
+  <span class="c1"># defining our two coins as lists</span>
+  <span class="n">coin1</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Heads&#39;</span><span class="p">,</span> <span class="s1">&#39;Tails&#39;</span><span class="p">]</span>
+  <span class="n">coin2</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Heads&#39;</span><span class="p">,</span> <span class="s1">&#39;Tails&#39;</span><span class="p">]</span>
+ 
+  <span class="c1"># &quot;flipping&quot; both coins randomly</span>
+  <span class="n">coin1_result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">coin1</span><span class="p">)</span>
+  <span class="n">coin2_result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">coin2</span><span class="p">)</span>
+ 
+  <span class="c1"># checking if both flips are heads</span>
+  <span class="k">if</span> <span class="n">coin1_result</span> <span class="o">==</span> <span class="s1">&#39;Heads&#39;</span> <span class="ow">and</span> <span class="n">coin2_result</span> <span class="o">==</span> <span class="s1">&#39;Heads&#39;</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mi">1</span>
+  <span class="k">else</span><span class="p">:</span>
+    <span class="k">return</span> <span class="mi">0</span>
+</pre></div>
+<div id="cell-2" class="clipboard-copy-txt">def coin_flip_experiment():
+  # defining our two coins as lists
+  coin1 = ['Heads', 'Tails']
+  coin2 = ['Heads', 'Tails']
+ 
+  # "flipping" both coins randomly
+  coin1_result = np.random.choice(coin1)
+  coin2_result = np.random.choice(coin2)
+ 
+  # checking if both flips are heads
+  if coin1_result == 'Heads' and coin2_result == 'Heads':
+    return 1
+  else:
+    return 0
+ 
+</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div><div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+        
+        
+        <div class="zeroclipboard-container">
+            <clipboard-copy for="cell-3">
+            <div>
+                <span class="notice" hidden>Copied!</span>
+                <svg aria-hidden="true" width="20" height="20" viewBox="0 0 16 16" version="1.1"  data-view-component="true" class="clipboard-copy-icon">
+                    <path fill-rule="evenodd" d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 010 1.5h-1.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-1.5a.75.75 0 011.5 0v1.5A1.75 1.75 0 019.25 16h-7.5A1.75 1.75 0 010 14.25v-7.5z"></path><path fill-rule="evenodd" d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0114.25 11h-7.5A1.75 1.75 0 015 9.25v-7.5zm1.75-.25a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25h-7.5z"></path>
+                </svg>
+                </div>
+            </clipboard-copy>
+        </div>
+        <div class="CodeMirror cm-s-jupyter">
+            <div class="highlight-ipynb hl-python"><pre><span></span><span class="c1">#how many times we run the experiment</span>
+
+<span class="n">num_trials</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># Empty list</span>
+<span class="n">prop</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">flips</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># keep track of the number of times heads pops up twice</span>
+<span class="n">two_heads_counter</span> <span class="o">=</span> <span class="mi">0</span>
+ 
+<span class="c1"># perform the experiment five times</span>
+<span class="k">for</span> <span class="n">flip</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_trials</span><span class="p">):</span>
+    
+  <span class="c1"># if both coins are heads add 1 to the counter</span>
+  <span class="n">two_heads_counter</span> <span class="o">+=</span> <span class="n">coin_flip_experiment</span><span class="p">()</span>
+  
+  <span class="c1"># keep track of the proportion of two heads at each flip </span>
+  <span class="n">prop</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">two_heads_counter</span><span class="o">/</span><span class="p">(</span><span class="n">flip</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+  
+  <span class="c1"># keep a list for number of flips</span>
+  <span class="n">flips</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">flip</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+ 
+<span class="c1"># plot all flips and proportion of two heads</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">flips</span><span class="p">,</span> <span class="n">prop</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Experimental Probability&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Number of Flips&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Proportion of Two Heads&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">hlines</span><span class="p">(</span><span class="mf">0.25</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">num_trials</span><span class="p">,</span> <span class="n">colors</span> <span class="o">=</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;True Probability&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+
+
+ 
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+<div id="cell-3" class="clipboard-copy-txt">#how many times we run the experiment
+
+num_trials = 2
+
+# Empty list
+prop = []
+flips = []
+
+# keep track of the number of times heads pops up twice
+two_heads_counter = 0
+ 
+# perform the experiment five times
+for flip in range(num_trials):
+    
+  # if both coins are heads add 1 to the counter
+  two_heads_counter += coin_flip_experiment()
+  
+  # keep track of the proportion of two heads at each flip 
+  prop.append(two_heads_counter/(flip + 1))
+  
+  # keep a list for number of flips
+  flips.append(flip + 1)
+ 
+# plot all flips and proportion of two heads
+
+plt.plot(flips, prop, label = 'Experimental Probability')
+plt.xlabel('Number of Flips')
+plt.ylabel('Proportion of Two Heads')
+
+plt.hlines(0.25, 0, num_trials, colors = 'orange', label = 'True Probability')
+plt.legend()
+
+
+ 
+plt.show()</div>
+    
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="jp-Cell-outputWrapper">
+
+
+<div class="jp-OutputArea jp-Cell-outputArea">
+
+<div class="jp-OutputArea-child">
+
+    
+    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+
+
+
+
+<div class="jp-RenderedImage jp-OutputArea-output ">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAYgAAAEGCAYAAAB/+QKOAAAAOXRFWHRTb2Z0d2FyZQBNYXRwbG90bGliIHZlcnNpb24zLjMuNCwgaHR0cHM6Ly9tYXRwbG90bGliLm9yZy8QVMy6AAAACXBIWXMAAAsTAAALEwEAmpwYAAAktUlEQVR4nO3de5xVdb3/8dfbEQW5KIGpCQUaXhAQcbgIyCXToxlqIil5N0M0tPJoab8Toj8fJ/UoeUqNELymWJkoGqap4AW8DUQqIoQ05hw8SYiAKCrwOX/sPdNmWDOzZmTNHob38/HYj9lrre93rc/eLvns73et9f0qIjAzM6tuh2IHYGZmTZMThJmZJXKCMDOzRE4QZmaWyAnCzMwS7VjsALamjh07RpcuXYodhpnZNmPevHn/jIjdk7Y1qwTRpUsXysrKih2Gmdk2Q9JbNW1zF5OZmSVygjAzs0ROEGZmlqhZXYMw21Z8+umnVFRUsH79+mKHYtuJli1b0qlTJ1q0aJG6jhOEWRFUVFTQtm1bunTpgqRih2PNXESwcuVKKioq6Nq1a+p6mXYxSTpa0mJJSyVdlrD9VEmv5F9zJR1csK1c0quSFkjyrUnWrKxfv54OHTo4OVijkESHDh3q3WLNrAUhqQS4GTgSqABeljQjIl4vKPY3YGhErJJ0DDAZ6F+wfXhE/DOrGM2KycnBGlNDzrcsu5j6AUsjYhmApPuA44GqBBERcwvKvwB0yjCe2j0xrGiHtu1Qhytgje8Rsa2k3f6Z7DbLM3Rv4O2C5Yr8upp8G3i0YDmAxyXNkzSmpkqSxkgqk1S2YsWKzxSw2fakpH13eg8+oep1zcTJmR5vxsynMj/G7GdfZO6L8+ssd8c9DzDukqsS1+++z2H0HnwC3fsdy613/LZexx927OmUzX81dfma4gAYeOQpAJS/VUGPASMAKJv/Khf98Gog/Wf9LLJsQSS1ZxJnJ5I0nFyCGFywelBELJf0eeBPkt6IiGe22GHEZHJdU5SWljZ89qOvzm5wVbN6W7Qos199abVq1YoFryxqlGNt2LCB407Zn+MyPs7sl6fRpk0bBh45uvaCrfaCnf5ny/8Grfbi5FO+xU033cS7777LQQcdxHEnj2GPPfaoKrJhwwZ23LGGfzpLdoE2XdL/t60pDmDui3/OvWm7M+ywE7Tbn9Jh+1M67KT6fdbPIMsWRAXQuWC5E7C8eiFJvYApwPERsbJyfUQsz/99F5hOrsvKzDK0evVq9t9/fxYvXgzA6NGjufXWWwFo06YN//7v/06fPn044ogjqGyxv/nmmxx99NEceuihHH744bzxxhsAnHXWWVx88cUMHz6cH/3oR9xxxx2MGzeuatv555/P8OHD2WeffXj66ac555xzOPDAAznrrLOq4nn88cc57LDD6NOnD6NGjeKDDz4AcsPqXHHFFfTp04eePXvyxhtvUF5ezqRJk/jZz35G7969efbZZ3n44Yfp378/hxxyCF/96lf5xz/+kfq7+PznP8++++7LW2+9tcVnWbBgAQMGDKBXr1584xvfYNWqVVX1fv3rXzNw4EB69OjBSy+9BMBLL73EwIEDOeSQQxg4cGDV9wvw9ttvc/TRR7P//vtz5ZVXVq1v06bNFjHNnj2br3/964mftWvXrnz66acArFmzhi5dulQtN1SWLYiXgW6SugL/A5wCfKuwgKQvAg8Ap0fEkoL1rYEdImJt/v1RQHI7zGwbd+XDC3l9+Zqtus/uX2jHFSMOqrXMRx99RO/evauWL7/8ck4++WRuuukmzjrrLL73ve+xatUqvvOd7wCwbt06+vTpww033MBVV13FlVdeyU033cSYMWOYNGkS3bp148UXX+SCCy7gqaeeAmDJkiU88cQTlJSUcMcdd2x2/FWrVvHUU08xY8YMRowYwZw5c5gyZQp9+/ZlwYIFdOrUiauvvponnniC1q1bc+211zJx4kTGjx8PQMeOHZk/fz633HIL119/PVOmTGHs2LG0adOGSy65pOoYL7zwApKYMmUK1113HTfccEOq73DZsmUsW7aML3/5y1t8ll69evGLX/yCoUOHMn78eK688kpuvPHGqu9p7ty5PPPMM5xzzjm89tprHHDAATzzzDPsuOOOPPHEE/z4xz/m97//PZBLHq+99hq77LILffv25dhjj6W0tLTW2Lp06bLFZx02bBh/+MMfOOGEE7jvvvsYOXJkvZ55SJJZgoiIDZLGAY8BJcBtEbFQ0tj89knAeKADcEv+CvuGiCgF9gCm59ftCNwbEX/MKlaz7VGrVq1YsGDBFuuPPPJIfve73/Hd736Xv/zlL1Xrd9hhB04++WQATjvtNE488UQ++OAD5s6dy6hRo6rKffzxx1XvR40aRUlJSeLxR4wYgSR69uzJHnvsQc+ePQE46KCDKC8vp6Kigtdff51BgwYB8Mknn3DYYYdV1T/xxBMBOPTQQ3nggQcSj1FRUcHJJ5/MO++8wyeffJLqGYDf/OY3PPfcc+y888786le/4nOf+9xmn2X16tW8//77DB06FIAzzzxzs88/enSuy2fIkCGsWbOG999/n7Vr13LmmWfy17/+FUmb/bI/8sgj6dChQ9Vneu655+pMEEnOPfdcrrvuOk444QRuv/32qpbfZ5Hpg3IRMROYWW3dpIL35wLnJtRbBhxcfb1Zc1TXL/3GtmnTJhYtWkSrVq1477336NQp+eZCSWzatInddtstMdEAtG7dusbj7LzzzkAu8VS+r1zesGEDJSUlHHnkkUybNq3W+iUlJWzYsCGxzIUXXsjFF1/Mcccdx+zZs5kwYUKN8VSqbEXV57MUqn47qSR+8pOfMHz4cKZPn055eTnDhg2rtXxDDBo0iPLycp5++mk2btxIjx49GrSfQr7Pzsw287Of/YwDDzyQadOmcc4551T92t20aRP3338/APfeey+DBw+mXbt2dO3ald/97ndA7ondwlbHZzFgwADmzJnD0qVLAfjwww9ZsmRJrXXatm3L2rVrq5ZXr17N3nvnbp688847t0pcu+66K+3bt+fZZ58F4O67765qTUCuBQLw3HPPseuuu7LrrrtuFkf1rrY//elPvPfee3z00Uc8+OCDVS2mulT/rABnnHEGo0eP5uyzz27ox9uME4TZdqryGkTl67LLLmPJkiVMmTKFG264gcMPP5whQ4Zw9dW52ypbt27NwoULOfTQQ3nqqaeqrgXcc889TJ06lYMPPpiDDjqIhx56aKvEt/vuu3PHHXcwevRoevXqxYABA6ougNdkxIgRTJ8+verC7YQJExg1ahSHH344HTt23CpxQS7ZXHrppfTq1YsFCxZUfRcA7du3Z+DAgYwdO5apU6cC8MMf/pDLL7+cQYMGsXHjxs32NXjwYE4//XR69+7NyJEjU3cvVf+sAKeeeiqrVq2q6ub6rBTR8DtDm5rS0tLwhEG2LVi0aBEHHnhgscOolzZt2lTdRWRN0/33389DDz3E3Xffnbg96byTNC9/7XcLHqzPzKwZuPDCC3n00UeZOXNm3YVTcoIws1TcemjafvGLX2z1ffoahJmZJXKCMDOzRE4QZmaWyAnCzMwSOUGYbYdWrlxZ9fzDnnvuyd577121/Mknn2yVYwwbNoz999+fgw8+mEGDBm02QF1dysvL6/0k8LBhw0i6zX3GjBlcc801AEyYMIHrr78egPHjx/PEE08AcOONN/Lhhx/W63jbA9/FZLYd6tChQ9XwGBMmTNhs0DeoY0jrerjnnnsoLS1l8uTJXHrppcyYMWOz7Rs3bqxxrKat5bjjjuO447YcaPyqq/41/ueNN97Iaaedxi677JJpLNsatyDMDNhyeO7CX9sAPXr0oLy8HMgNad2vXz969+7Neeedt8XTwdUNGTKkasiMNm3aMH78ePr378/zzz/PxIkT6dGjBz169KgaERVySerMM8+kV69enHTSSVW/8K+66ir69u1Ljx49GDNmDIUP+yYNtV04zHj1z3v//ffz85//nOXLlzN8+HCGDx/O1KlT+cEPflBV7tZbb+Xiiy+u35fZTLgFYdYUbO0pbxs4AVbhkNY1DWy3aNEifvOb3zBnzhxatGjBBRdcwD333MMZZ5xR434ffvjhqtFa161bR48ePbjqqquYN28et99+Oy+++CIRQf/+/Rk6dCjt27dn8eLFTJ06lUGDBnHOOedwyy23cMkllzBu3LiqoS1OP/10HnnkEUaMGFG17+pDbdfloosuYuLEicyaNYuOHTuybt06evXqxXXXXUeLFi24/fbb+dWvflXPb7J5cAvCzKrUNjx3pSeffJJ58+bRt29fevfuzZNPPsmyZcsSy5566qn07t2bOXPmVLVGSkpKGDlyJJAb0O4b3/gGrVu3pk2bNpx44olV4wp17ty5auC60047jeeeew6AWbNm0b9/f3r27MlTTz3FwoULq46XNNR2fbVu3ZqvfOUrPPLII7zxxht8+umnVclte+MWhFlT0ESmvC0c0nrHHXdk06ZNVcvr168HciO2nnnmmfz0pz+tc3+V1yAKtWzZsioJ1TYWXNIw2OvXr+eCCy6grKyMzp07M2HChKq4aqrTEOeeey7/+Z//yQEHHLDVRkbdFrkFYWaJunTpwvz58wGYP38+f/vb3wA44ogjuP/++3n33XcBeO+993jrrbcadIwhQ4bw4IMP8uGHH7Ju3TqmT5/O4YcfDsDf//53nn/+eQCmTZvG4MGDq5JBx44d+eCDD6qGH6+UNNR2GtWHzu7fvz9vv/02995771YbGXVb5BaEmSUaOXIkd911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
+"
+>
+</div>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 </div>
