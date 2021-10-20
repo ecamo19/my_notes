@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>Model selection - </title>
+        <title>Dimension Reduction Methods - </title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -88,11 +88,11 @@
 </li>
             
 <li>
-    <a href="../dimesion_reduction/" class="dropdown-item">Dimension Reduction Methods</a>
+    <a href="./" class="dropdown-item active">Dimension Reduction Methods</a>
 </li>
             
 <li>
-    <a href="./" class="dropdown-item active">Model selection</a>
+    <a href="../model_selection/" class="dropdown-item">Model selection</a>
 </li>
             
 <li>
@@ -118,12 +118,12 @@
 
                     <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a rel="prev" href="../dimesion_reduction/" class="nav-link">
+                                <a rel="prev" href="../bias_variance_tradeoff/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../multiple_regression/" class="nav-link">
+                                <a rel="next" href="../model_selection/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -145,29 +145,21 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#model-selection" class="nav-link">Model selection</a>
+            <li class="nav-item" data-level="1"><a href="#dimension-reduction-methods" class="nav-link">Dimension Reduction Methods</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#best-subset-selection" class="nav-link">Best Subset Selection</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#forward-stepwise-selection" class="nav-link">Forward Stepwise Selection</a>
+            <li class="nav-item" data-level="2"><a href="#pcr" class="nav-link">PCR</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#backward-stepwise-selection" class="nav-link">Backward Stepwise Selection</a>
+            <li class="nav-item" data-level="2"><a href="#pls" class="nav-link">PLS</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#choosing-the-optimal-model-cp-aic-bic-and-adjusted-r2" class="nav-link">Choosing the Optimal Model Cp , AIC, BIC, and Adjusted R^2</a>
+            <li class="nav-item" data-level="2"><a href="#what-goes-wrong-in-high-dimensions" class="nav-link">What Goes Wrong in High Dimensions?</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#one-standard-error-rule" class="nav-link">One-standard-error rule.</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#do-not-use-r2-or-rss-for-selecting-a-model" class="nav-link">Do not use R^2 or RSS for selecting a model</a>
+            <li class="nav-item" data-level="2"><a href="#pcr-vrs-pls" class="nav-link">PCR vrs PLS</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -888,19 +880,19 @@ all of MD as it is not optimized for dense, information rich UIs.
     <!-- End of mathjax configuration --><div class="jupyter-wrapper">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="model-selection">Model selection<a class="anchor-link" href="#Model-selection">&#182;</a></h1><h2 id="best-subset-selection">Best Subset Selection<a class="anchor-link" href="#Best-Subset-Selection">&#182;</a></h2><p>Fit a separate least squares regression for each possible combination of $p$ predictors. That is, fit all possible combinations and evaluate all the possibilities.</p>
-<p>The problem with this is that we have to evaluate $2^p$ models which is computationally expensive.</p>
-<h2 id="forward-stepwise-selection">Forward Stepwise Selection<a class="anchor-link" href="#Forward-Stepwise-Selection">&#182;</a></h2><p>This method starts with a null model with no predictors, then add a predictor, evaluate the model and repeats.</p>
-<p>Forward selection can be applied when n &lt; p but only to $M_0$ ..... $M_{n - 1}$  since  n &gt;= p will not yield a unique solution.</p>
-<h2 id="backward-stepwise-selection">Backward Stepwise Selection<a class="anchor-link" href="#Backward-Stepwise-Selection">&#182;</a></h2><p>This method begins with the full least squares model containing all p predictors. This works when n &gt; p</p>
-<h2 id="choosing-the-optimal-model-cp-aic-bic-and-adjusted-r5e2">Choosing the Optimal Model Cp , AIC, BIC, and Adjusted R^2<a class="anchor-link" href="#Choosing-the-Optimal-Model-Cp-,-AIC,-BIC,-and-Adjusted-R%5E2">&#182;</a></h2><ul>
-<li><p>Cp: Add a 2d$\sigma^2$ penalty that increases as the number of predictor increase. Cp ~ AIC</p>
-</li>
-<li><p>BIC: Usually BIC chooses a model with less predictors that the one chosen by Cp</p>
-</li>
+<h1 id="dimension-reduction-methods">Dimension Reduction Methods<a class="anchor-link" href="#Dimension-Reduction-Methods">&#182;</a></h1><p>When n &lt;&lt; p and/or there is collinearity the variance will increase so OLS will not perform well, so other methods are need to overcome this.</p>
+<p>These methods control variance by transforming the predictors and then fit a least squares model using these transformed variables. With these methods overfitting is avoid by using a less flexible approach.</p>
+<p>If the correlation among predictors is high, then the ordinary least squares solution for multiple linear regression will have high variability and will become unstable OR  if n &lt;&lt; p  least squares will be unable to ﬁnd a unique set of regression coeﬃcients that minimize the SSE</p>
+<h2 id="pcr">PCR<a class="anchor-link" href="#PCR">&#182;</a></h2><p>Does not perform feature selection</p>
+<p>Sometimes dimension reduction via PCA does not necessarily produce new predictors that explain the response.</p>
+<ul>
+<li>The scores indicates if a value is below or above average. For example if the score &lt; 0 in a PCA with two variables, then this indicates a city with below-average population size and below average ad spending. </li>
 </ul>
-<h2 id="one-standard-error-rule">One-standard-error rule.<a class="anchor-link" href="#One-standard-error-rule.">&#182;</a></h2><p>We first calculate the standard error of the estimated test MSE for each model size, and then select the smallest model for which the estimated test error is within one standard error of the lowest point on the curve.</p>
-<h2 id="do-not-use-r5e2-or-rss-for-selecting-a-model">Do not use R^2 or RSS for selecting a model<a class="anchor-link" href="#Do-not-use-R%5E2-or-RSS-for-selecting-a-model">&#182;</a></h2><p>The training error will decrease as more variables are included in the model, but the test error may not. Therefore, training set RSS and training set R^2  cannot be used to select from among a set of models with diﬀerent numbers of variables. $R^2$ increases with the number of predictors while RSS decrease.</p>
+<h2 id="pls">PLS<a class="anchor-link" href="#PLS">&#182;</a></h2><p>Kuhn: We recommend using PLS when there are correlated predictors and a linear regression-type solution is desired</p>
+<p>PLS identifies new features in a supervised way by making use of the response Y in order to identify new features that not only approximate the old features well, but also that are related to the response.</p>
+<p>PLS ﬁnds linear combinations of the predictors</p>
+<h2 id="what-goes-wrong-in-high-dimensions">What Goes Wrong in High Dimensions?<a class="anchor-link" href="#What-Goes-Wrong-in-High-Dimensions?">&#182;</a></h2><p>Cp, AIC, and BIC approaches are not appropriate in the high-dimensional setting, because estimating $\sigma^2$ is problematic.</p>
+<h2 id="pcr-vrs-pls">PCR vrs PLS<a class="anchor-link" href="#PCR-vrs-PLS">&#182;</a></h2><p>Since the directions in PLS are obtained by integrating the response variable, they explain more variation in Y than the principal components regression do. PLS also gives similar loadings to correlated variables, but variables that are correlated with the Y receive more weights compared with PCR.</p>
 
 </div>
 </div>

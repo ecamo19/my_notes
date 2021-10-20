@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>Model selection - </title>
+        <title>Probability - </title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -92,7 +92,7 @@
 </li>
             
 <li>
-    <a href="./" class="dropdown-item active">Model selection</a>
+    <a href="../model_selection/" class="dropdown-item">Model selection</a>
 </li>
             
 <li>
@@ -100,7 +100,7 @@
 </li>
             
 <li>
-    <a href="../probability/" class="dropdown-item">Probability</a>
+    <a href="./" class="dropdown-item active">Probability</a>
 </li>
             
 <li>
@@ -118,12 +118,12 @@
 
                     <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a rel="prev" href="../dimesion_reduction/" class="nav-link">
+                                <a rel="prev" href="../multiple_regression/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="../multiple_regression/" class="nav-link">
+                                <a rel="next" href="../regularization/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -145,29 +145,21 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#model-selection" class="nav-link">Model selection</a>
+            <li class="nav-item" data-level="1"><a href="#probability" class="nav-link">Probability</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#best-subset-selection" class="nav-link">Best Subset Selection</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#forward-stepwise-selection" class="nav-link">Forward Stepwise Selection</a>
+            <li class="nav-item" data-level="2"><a href="#set-theory" class="nav-link">Set theory</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#backward-stepwise-selection" class="nav-link">Backward Stepwise Selection</a>
+            <li class="nav-item" data-level="2"><a href="#experiments-and-sample-spaces" class="nav-link">Experiments and Sample Spaces</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#choosing-the-optimal-model-cp-aic-bic-and-adjusted-r2" class="nav-link">Choosing the Optimal Model Cp , AIC, BIC, and Adjusted R^2</a>
+            <li class="nav-item" data-level="2"><a href="#the-frequentist-definition-of-probability" class="nav-link">The frequentist definition of probability</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#one-standard-error-rule" class="nav-link">One-standard-error rule.</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#do-not-use-r2-or-rss-for-selecting-a-model" class="nav-link">Do not use R^2 or RSS for selecting a model</a>
+            <li class="nav-item" data-level="2"><a href="#law-of-large-numbers" class="nav-link">Law of Large Numbers</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -888,19 +880,28 @@ all of MD as it is not optimized for dense, information rich UIs.
     <!-- End of mathjax configuration --><div class="jupyter-wrapper">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="model-selection">Model selection<a class="anchor-link" href="#Model-selection">&#182;</a></h1><h2 id="best-subset-selection">Best Subset Selection<a class="anchor-link" href="#Best-Subset-Selection">&#182;</a></h2><p>Fit a separate least squares regression for each possible combination of $p$ predictors. That is, fit all possible combinations and evaluate all the possibilities.</p>
-<p>The problem with this is that we have to evaluate $2^p$ models which is computationally expensive.</p>
-<h2 id="forward-stepwise-selection">Forward Stepwise Selection<a class="anchor-link" href="#Forward-Stepwise-Selection">&#182;</a></h2><p>This method starts with a null model with no predictors, then add a predictor, evaluate the model and repeats.</p>
-<p>Forward selection can be applied when n &lt; p but only to $M_0$ ..... $M_{n - 1}$  since  n &gt;= p will not yield a unique solution.</p>
-<h2 id="backward-stepwise-selection">Backward Stepwise Selection<a class="anchor-link" href="#Backward-Stepwise-Selection">&#182;</a></h2><p>This method begins with the full least squares model containing all p predictors. This works when n &gt; p</p>
-<h2 id="choosing-the-optimal-model-cp-aic-bic-and-adjusted-r5e2">Choosing the Optimal Model Cp , AIC, BIC, and Adjusted R^2<a class="anchor-link" href="#Choosing-the-Optimal-Model-Cp-,-AIC,-BIC,-and-Adjusted-R%5E2">&#182;</a></h2><ul>
-<li><p>Cp: Add a 2d$\sigma^2$ penalty that increases as the number of predictor increase. Cp ~ AIC</p>
-</li>
-<li><p>BIC: Usually BIC chooses a model with less predictors that the one chosen by Cp</p>
-</li>
+<h1 id="probability">Probability<a class="anchor-link" href="#Probability">&#182;</a></h1><p><a href="https://www.codecademy.com/paths/fundamental-math-for-data-science/tracks/math-ds-probability/modules/math-ds-rules-of-probability/articles/probability-set-theory-and-the-law-of-large-numbers">ref</a></p>
+<h2 id="set-theory">Set theory<a class="anchor-link" href="#Set-theory">&#182;</a></h2><p>Set is a collection of things. For example, we can use a set to represent items in a backpack. An example of a set could be: $${Book,Paper,Folder,Hat,Pen,Snack}$$</p>
+<p>Sets also follow two key rules:</p>
+<ul>
+<li>Each element in a set is distinct.</li>
+<li>The elements in a set are in no particular order.</li>
 </ul>
-<h2 id="one-standard-error-rule">One-standard-error rule.<a class="anchor-link" href="#One-standard-error-rule.">&#182;</a></h2><p>We first calculate the standard error of the estimated test MSE for each model size, and then select the smallest model for which the estimated test error is within one standard error of the lowest point on the curve.</p>
-<h2 id="do-not-use-r5e2-or-rss-for-selecting-a-model">Do not use R^2 or RSS for selecting a model<a class="anchor-link" href="#Do-not-use-R%5E2-or-RSS-for-selecting-a-model">&#182;</a></h2><p>The training error will decrease as more variables are included in the model, but the test error may not. Therefore, training set RSS and training set R^2  cannot be used to select from among a set of models with diﬀerent numbers of variables. $R^2$ increases with the number of predictors while RSS decrease.</p>
+<p>Sets can also contain subsets. Set A is a subset of set B if all the elements in A exist within B. For example:</p>
+$$A = {1,2,3}$$$$B = {1,2,3,4,5}$$<h2 id="experiments-and-sample-spaces">Experiments and Sample Spaces<a class="anchor-link" href="#Experiments-and-Sample-Spaces">&#182;</a></h2><p>In probability, an <strong>experiment</strong> is something that produces observation(s) with some level of uncertainty.</p>
+<p>A <strong>sample point</strong> is a single possible outcome of an experiment.</p>
+<p>Finally, a <strong>sample space</strong> is the set of all possible sample points for an experiment.</p>
+<p>For example, suppose that we run <strong>an experiment</strong> where we flip a coin twice and record whether each flip results in heads or tails. There are four sample points in this experiment: two heads (HH), tails and then heads (TH), heads and then tails (HT), or two tails (TT). We can write the full <strong>sample space</strong> for this experiment as follows:</p>
+$$S = \{HH, TT, HT, TH\}$$<p>Suppose we are interested in the probability of one specific outcome: <em>HH</em>. A specific outcome (or set of outcomes) is known as an event and is a subset of the sample space. Three events we might look at in this sample space are:</p>
+$$Getting\ Two\ Heads$$$$A={HH}$$$$Getting\ Two\ Tails$$$$B={TT}$$$$Getting\ Both\ a\ Heads\ and\ Tails$$$$C={HT,TH}$$<h2 id="the-frequentist-definition-of-probability">The frequentist definition of probability<a class="anchor-link" href="#The-frequentist-definition-of-probability">&#182;</a></h2><p>If we run an experiment an infinite amount of times, the probability of each event is the proportion of times it occurs. Unfortunately, we don’t have the ability to flip two coins an infinite amount of times — but we can estimate probabilities by choosing some other large number, such as 1000. For example:</p>
+$${HH}: 252$$$${TT}: 247$$$${HT}: 256$$$${TH}: 245$$<p>To calculate the estimated probability of any one outcome, we use the following formula:</p>
+$$P(event) = \frac{Number\ of\ times\ the\ event\ occurred}{Total\ number\ of\ trials}$$<p>In this scenario, a trial is a <strong>single run</strong> of our experiment (two coin flips). So, the probability of two heads on two coin flips is approximately:</p>
+$$P(HH) = \frac{255}{1000}$$<h2 id="law-of-large-numbers">Law of Large Numbers<a class="anchor-link" href="#Law-of-Large-Numbers">&#182;</a></h2><p>We can’t repeat our random experiment an infinite amount of times. However, we can still flip both coins a large number of times. As we flip both coins more and more, the observed proportion of times each event occurs will converge to its true probability. This is called the law of large numbers.</p>
+<p>Let’s observe the law of large numbers in real-time</p>
+
+<pre><code>{python}
+
+print("hello")</code></pre>
 
 </div>
 </div>
