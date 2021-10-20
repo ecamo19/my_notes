@@ -2,6 +2,14 @@ site_name: ""
 site_url: 
 
 theme:
-    name: mkdocs
+    name: united  
+    palette:
+        scheme: slate
     nav_style: dark
+    
+plugins:
+  - mkdocs-jupyter:
+        execute: True
+        theme: dark
+        kernel_name: python3
 
