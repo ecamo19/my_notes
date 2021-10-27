@@ -2,3 +2,4 @@ site/
 
 *.ipynb_checkpoints
 images/
+*.png
