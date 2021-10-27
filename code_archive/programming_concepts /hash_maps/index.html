@@ -8,7 +8,7 @@
         
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>Resampling Methods - </title>
+        <title>Hash Function example - </title>
         <link href="../../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -36,7 +36,7 @@
                             <li class="navitem">
                                 <a href="../../.." class="nav-link">Notes</a>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Code archive <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -45,7 +45,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../../code_archive/programming_concepts%20/hash_maps/" class="dropdown-item">Hash Function example</a>
+    <a href="./" class="dropdown-item active">Hash Function example</a>
 </li>
     </ul>
   </li>
@@ -75,7 +75,7 @@
   </li>
                                 </ul>
                             </li>
-                            <li class="dropdown active">
+                            <li class="dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Stats and modeling <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -84,7 +84,7 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../../applications/law_of_large_numbers/" class="dropdown-item">Law of large numbers</a>
+    <a href="../../../stats_and_modeling/applications/law_of_large_numbers/" class="dropdown-item">Law of large numbers</a>
 </li>
     </ul>
   </li>
@@ -94,31 +94,31 @@
     <ul class="dropdown-menu">
             
 <li>
-    <a href="../bias_variance_tradeoff/" class="dropdown-item">Bias-Variance trade-off</a>
+    <a href="../../../stats_and_modeling/theory/bias_variance_tradeoff/" class="dropdown-item">Bias-Variance trade-off</a>
 </li>
             
 <li>
-    <a href="../dimesion_reduction/" class="dropdown-item">Dimension Reduction Methods</a>
+    <a href="../../../stats_and_modeling/theory/dimesion_reduction/" class="dropdown-item">Dimension Reduction Methods</a>
 </li>
             
 <li>
-    <a href="../model_selection/" class="dropdown-item">Model selection</a>
+    <a href="../../../stats_and_modeling/theory/model_selection/" class="dropdown-item">Model selection</a>
 </li>
             
 <li>
-    <a href="../multiple_regression/" class="dropdown-item">Multiple Regression</a>
+    <a href="../../../stats_and_modeling/theory/multiple_regression/" class="dropdown-item">Multiple Regression</a>
 </li>
             
 <li>
-    <a href="../probability/" class="dropdown-item">Probability</a>
+    <a href="../../../stats_and_modeling/theory/probability/" class="dropdown-item">Probability</a>
 </li>
             
 <li>
-    <a href="../regularization/" class="dropdown-item">Penalized Models</a>
+    <a href="../../../stats_and_modeling/theory/regularization/" class="dropdown-item">Penalized Models</a>
 </li>
             
 <li>
-    <a href="./" class="dropdown-item active">Resampling Methods</a>
+    <a href="../../../stats_and_modeling/theory/resampling_methods/" class="dropdown-item">Resampling Methods</a>
 </li>
     </ul>
   </li>
@@ -128,12 +128,12 @@
 
                     <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item">
-                                <a rel="prev" href="../regularization/" class="nav-link">
+                                <a rel="prev" href="../../.." class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" class="nav-link disabled">
+                                <a rel="next" href="../../../how_to/how_to_set_virtual_env_in_python/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -155,7 +155,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#resampling-methods" class="nav-link">Resampling Methods</a>
+            <li class="nav-item" data-level="1"><a href="#hash-function-example" class="nav-link">Hash Function example</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -874,25 +874,57 @@ all of MD as it is not optimized for dense, information rich UIs.
     <!-- End of mathjax configuration --><div class="jupyter-wrapper">
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="resampling-methods">Resampling Methods<a class="anchor-link" href="#Resampling-Methods">&#182;</a></h1><p>Resampling methods are used in the absence of very large designated test sets that can be used to directly estimate test error rates</p>
-<ul>
-<li><strong>Validation Set Approach</strong> </li>
-</ul>
-<p>Good when n is large. This method consist in dividing randomly the data set into Training and Test (Validation) data sets</p>
-<p>Drawbacks:</p>
-<p>1) High Variable, depends on the observations chosen 
-2) Not all the data is included in training the model</p>
-<ul>
-<li><strong>Leave-one-out cross validation (LOOCV)</strong></li>
-</ul>
-<p>In this method a single pair observations ($x_1$,$y_1$) are left out for validation and the rest of the data is used for training being repeated n times</p>
-<p>Drawbacks:</p>
-<p>1) Expensive to implement (time consuming, the validation is done in n observations)</p>
-<ul>
-<li><strong>k-fold Cross Validation</strong></li>
-</ul>
-<p>Randomly divide the whole data set in k groups of equal size. The first fold is used as validation set and the others are used as training sets. This procedure is repeated k times, each time, a different fold is treated as validation test.</p>
-<p>For example if k = 10 then the data set is divided into 10 folds, the first one will be used as validation set and then the statistical method (i.e. linear model) is fitted on each one of the other 9 folds. This is repeated until each one of the folds has being used as validation sets.</p>
+<p>Tabular data there is a relationship between the elements of a row. Each column corresponds to a different feature of the row. For example:</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>Musician        |  State of Birth
+Miles Davis     |  Illinois
+John Coltrane   |  North Carolina
+Duke Ellington  |  Ohio
+Dizzy Gillespie |  South Carolina
+Thelonious Monk |  North Carolina</p>
+<p>This kind of table, with only two columns, represents a special relationship that mathematicians would call a <strong>“map”</strong>. This table maps states to state flowers, but many other relationships can be modeled with maps.</p>
+<p>When talking about a map we describe the inputs (jazz musicians, in this case) as the keys to the map. The output (here the state of origin) is said to be the value at a given key.</p>
+<p>In order for a relationship to be a <strong>map</strong>, every key that is used can only be the key to a <strong>single value.</strong></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>For creating a hash map we use arrays bescause with these we can use the index for keep track of values in memory (index ==  key).</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>A <strong>hashing function</strong> is a function that tranform a string (key) into a index.</p>
+<p>The most important aspect is that a hashing function returns an array index as output.</p>
+<p>The Hash map implementation needs to know the size of our array.</p>
+<p>In order for our hash map implementation to guarantee that it returns an index that fits into the underlying array, the hash function will first compute a value using some scoring metric: this is the hash value, hash code, or just the hash. Our hash map implementation then takes that hash value mod the size of the array. This guarantees that the value returned by the hash function can be used as an index into the array we’re using.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h1 id="hash-function-example">Hash Function example<a class="anchor-link" href="#Hash-Function-example">&#182;</a></h1><p><img src="docs/code_archive/programming_concepts /images/hash_map.png" alt="Hash Function"></p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 
 </div>
 </div>
